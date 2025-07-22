@@ -34,26 +34,31 @@
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu main main main main main'
-    'left main main main main right'
-    'footer footer footer footer footer footer';
+    "header header"
+    "menu main"
+    "left right"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
   gap: 10px;
   background-color: red;
   padding: 10px;
 }
+
 .grid-container > div {
   background-color: #f0f0f0;
   text-align: center;
   padding: 20px 0;
-  font-size: 30px;
+  font-size: 24px;
+  border: 2px solid red;
 }
+
 .header { grid-area: header; }
-.menu { grid-area: menu; }
-.main { grid-area: main; }
-.left { grid-area: left; }
-.right { grid-area: right; }
+.menu   { grid-area: menu; }
+.main   { grid-area: main; }
+.left   { grid-area: left; }
+.right  { grid-area: right; }
 .footer { grid-area: footer; }
+
 
 /* -------- ข้อ 10 -------- */
 .table1 {
@@ -71,37 +76,61 @@
 /* -------- ข้อ 11 -------- */
 .flex1 {
   display: flex;
+  justify-content: flex-end;
   background-color: DodgerBlue;
-  flex-direction: row-reverse;
-}
-.flex1 .item {
-  color: red;
+  justify-content: flex-end;
   padding: 10px;
+  gap: 10px;
+}
+
+.flex1 .item {
+  background-color: red;
+  color: black;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
 }
 
 /* -------- ข้อ 12 -------- */
 .flex2 {
   display: flex;
-  flex-wrap: wrap;
-}
-.flex2 .item {
-  background-color: lightgray;
-  margin: 5px;
-  padding: 20px;
-  width: 100px;
-  text-align: center;
+  flex-wrap: wrap-reverse;
+  background-color: dodgerblue;
+  gap: 10px;
+  padding: 10px; 
+  width: 510px;
 }
 
+.flex2 .item {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+
+
+
 /* -------- ข้อ 13 -------- */
-.center-box {
+.center-container {
+  width: 700px;
+  height: 250px;
+  background: #2196F3;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightblue;
-  height: 300px;
+  margin: 40px;
 }
-.inner-box {
-  background-color: white;
-  padding: 20px;
-  font-size: 20px;
+.center-box {
+  width: 60px;
+  height: 60px;
+  background: #f0f0f0;
 }
